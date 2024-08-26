@@ -1,0 +1,181 @@
+[data-aos] {
+  opacity: 0;
+}
+
+.outer{
+  z-index: -1;
+  opacity: 10;
+}
+main{
+  padding-top: 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between items */
+  padding: 10px 20px;
+  position: fixed;
+  z-index: 1000;
+  /* position: fixed; 
+  top: 0%;To position the CSEA label absolutely within the nav */
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  padding: 10px 15px;
+  list-style: none;
+}
+
+
+/* Home Button Glowing Effect */
+.home {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.home::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(59 7 100);
+  font-weight: bold;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+}
+
+.home::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  position: absolute;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.home:hover::before {
+  opacity: 1;
+}
+
+.home:active:after {
+  background: transparent;
+}
+
+.home:active {
+  color: #000;
+}
+
+/* Glowing Effect for 'Team' Label */
+.team {
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  padding: 10px 15px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.team::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(59 7 100);
+  font-weight: bold;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+}
+
+.team::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.team:hover::before {
+  opacity: 1;
+}
+
+.team:active:after {
+  background: transparent;
+}
+
+.team:active {
+  color: #000;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  z-index: 10;
+  margin-top: 0.5rem;
+  min-width: 120px;
+  right: 0;
+}
+
+.dropdown-container:hover .dropdown {
+  display: block;
+}
+
+.dropdown option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Animation Keyframes */
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
