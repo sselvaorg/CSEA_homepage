@@ -57,7 +57,7 @@ function HomePage() {
       <Content style={{ padding: '0 20px', marginTop: '20px' }}>
         <Row gutter={[16, 24]} justify="center" style={{ padding: '20px 0' }}>
           <Col xs={24} md={20} lg={18}>
-            <Title level={1} className='home' style={{ textAlign: 'center' }}>ABOUT</Title>
+            <Title level={1} className='home' style={{ textAlign: 'center' }}>ABOUT(hover here)</Title>
             <Paragraph className="bold" style={{ color: 'black', maxWidth: '100%', margin: '0 auto', textAlign: 'center' }}>
             The Computer Science and Engineering Association (CSEA) of College of Engineering Guindy is an association with a legacy of more than 10 years, established for the primary goal of "Knowledge Advancement". Being the brainchild of Department of Computer Science and Engineering (DCSE) of CEG, one of the oldest engineering colleges of the country, the association ensures that the role of technocrats and specialists in various industries is implied. It extends to develop and promote the progression of Computer Science and technologies to its students as well as the members of the global community through its rich alumni support. Comprising students and faculty, CSEA is one of the most active Engineering Associations in the city.
             </Paragraph>
