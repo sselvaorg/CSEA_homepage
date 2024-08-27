@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+    background-color: #6A0DAD;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    flex: 1;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-items {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .menu-items .ant-menu {
+    background-color: #6A0DAD;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-items {
+      display: none;
+    }
+    
+    .menu-items.visible {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 64px; /* Adjust based on your header height */
+      right: 0;
+      background-color: #6A0DAD;
+      width: 100%;
+      z-index: 1000;
+    }
+  
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+  
